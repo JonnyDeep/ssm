@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <!--mybatis配置mapper-->
+
+    <!--全局settting,根据需要添加-->
+
+
+    <!-- 配置别名 -->
+    <typeAliases>
+        <!--<typeAlias alias="product" type="com.amos.entity.Product" />-->
+        <!--别名扫描-->
+        <package name="cn.hlq.testssm.po"></package>
+    </typeAliases>
+
+    <!--配置mapper
+    由于使用sping和mybatis的整合包进行mapper扫描，这里不需要配置了。
+    必须遵循：mapper.xml和mapper.java文件同名且在一个目录
+    -->
+    <!--<mappers></mappers>-->
+
+</configuration>

@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="testssm:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="testssm.war">
+      <element id="artifact" artifact-name="testssm:war exploded" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: commons-fileupload:commons-fileupload:1.3.1" />
+          <element id="library" level="project" name="Maven: commons-io:commons-io:2.2" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.4.0" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.4.3" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.4.3" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

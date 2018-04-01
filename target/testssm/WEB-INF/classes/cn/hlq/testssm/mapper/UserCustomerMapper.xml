@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.hlq.testssm.mapper.UserCustomerMapper">
+
+
+    <!--定义sql的查询片段,就是商品的查询条件-->
+    <sql id="query_user_where">
+        <!--使用动态查询-->
+        <if test="userCustomer!=null">
+            <if test="userCustomer.name!=null and userCustomer.name!=''">
+                tb_user.name like '%${userCustomer.name}%';
+            </if>
+        </if>
+    </sql>
+
+    <!--商品列表查询
+    parameterTyper传入包装对象(包装了查询条件)
+    resultType 建议使用扩展对象
+    -->
+
+    <select id="findUserList" parameterType="cn.hlq.testssm.po.UserQueryVo" resultType="cn.hlq.testssm.po.UserCustomer">
+        SELECT * FROM tb_user
+        <where>
+            <include refid="query_user_where"></include>
+        </where>
+    </select>
+</mapper>
